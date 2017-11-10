@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-10 15:41+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\edu\templates\edu\footer.html:84 .\edu\templates\edu\header.html:19
+#: .\edu\templates\edu\music_country.html:8
+msgid "Home"
+msgstr ""
+
+#: .\edu\templates\edu\footer.html:87
+msgid "Terms of Service"
+msgstr ""
+
+#: .\edu\templates\edu\footer.html:90
+msgid "Privacy Policy"
+msgstr ""
+
+#: .\edu\templates\edu\header.html:22
+msgid "Nursery & Preschools"
+msgstr ""
+
+#: .\edu\templates\edu\header.html:25
+msgid "Music Schools & Teachers"
+msgstr ""
+
+#: .\edu\templates\edu\home.html:21 .\edu\templates\edu\home.html:52
+msgid "Happy and healthy family matters"
+msgstr ""
+
+#: .\edu\templates\edu\home.html:56 .\edu\templates\edu\home.html:58
+#, python-format
+msgid "Best Nursery & Preschools in %(loc_name)s"
+msgstr ""
+
+#: .\edu\templates\edu\home.html:59
+msgid ""
+"Your child goes to school soon? It's time to find the favorite nursery/"
+"preschool and kindergarten for your child."
+msgstr ""
+
+#: .\edu\templates\edu\home.html:62 .\edu\templates\edu\home.html:72
+msgid "Details"
+msgstr ""
+
+#: .\edu\templates\edu\home.html:66 .\edu\templates\edu\home.html:68
+#: .\edu\templates\edu\music_country.html:15
+#: .\edu\templates\edu\music_country.html:40
+#: .\edu\templates\edu\music_country.html:44
+#, python-format
+msgid "Best Music Schools & Teachers in %(loc_name)s"
+msgstr ""
+
+#: .\edu\templates\edu\home.html:69
+ .\edu\templates\edu\music_country.html:34
+#, python-format
+msgid ""
+"With the <strong>huge benefits to learning to play a musical instrument</"
+"strong>, make sure to find the <strong>best music schools and teachers in "
+"%(loc_name)s</strong>, to make <strong>learning music a fun and enjoyable "
+"experience</strong> for your child and yourself."
+msgstr ""
+
+#: .\edu\templates\edu\music_country.html:9
+#, python-format
+msgid "Music Schools & Teachers in %(loc_name)s"
+msgstr ""
+
+#: .\edu\templates\edu\music_country.html:29
+msgid "Music Benefits"
+msgstr ""
+
+#: .\edu\templates\edu\music_country.html:30
+msgid ""
+"<strong>Playing a musical instrument</strong> has been proven beneficial for "
+"developing aptitude for math and science, and studies showed that "
+"<strong>music lessons can boost young children's brain on memories and "
+"executive function</strong>."
+msgstr ""
+
+#: .\edu\templates\edu\music_country.html:33
+msgid "Learning Music is Fun"
+msgstr ""
