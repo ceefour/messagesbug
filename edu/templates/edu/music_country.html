@@ -1,0 +1,51 @@
+{% extends 'edu/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <nav aria-label="breadcrumb" role="navigation" style="margin-top: -1.5rem">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ home_path }}">{% trans 'Home' %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% blocktrans %}Music Schools & Teachers in {{ loc_name }}{% endblocktrans %}</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+
+        <h1>{% blocktrans %}Best Music Schools & Teachers in {{ loc_name }}{% endblocktrans %}</h1>
+        <div class="row justify-center mt-5">
+            <div class="col-md-6 pl-5 pr-5 text-center">
+                <img class="mb-4 img-fluid" src="{% static 'edu/music-school.jpg' %}">
+            </div>
+            <div class="col-md-6 text-left">
+                {% comment %}<p class="lead mt-4 mb-5">{% blocktrans %}<strong>Playing a musical instrument</strong> has been proven to enhance aptitude development
+                    for math and science, and there are studies showing that <em>music lessons can boost young children's brain
+                        on memories and executive function</em>. So with the huge benefits to learning to play a musical instrument,
+                        make sure to find the <strong>best music schools and teachers in {{ loc_name }}</strong>,
+                        to make <em>learning music a fun and enjoyable experience</em> for your child and yourself.{% endblocktrans %}</p>{% endcomment %}
+                <div class="row">
+                    <div class="col-md-6 col-feature mb-4">
+                        <h4 class="mb-3">{% trans 'Music Benefits' %}</h4>
+                        <p>{% blocktrans %}<strong>Playing a musical instrument</strong> has been proven beneficial for developing aptitude for math and science, and studies showed that <strong>music lessons can boost young children's brain on memories and executive function</strong>.{% endblocktrans %}</p>
+                    </div>
+                    <div class="col-md-6 col-feature mb-4">
+                        <h4 class="mb-3">{% trans 'Learning Music is Fun' %}</h4>
+                        <p>{% blocktrans %}With the <strong>huge benefits to learning to play a musical instrument</strong>, make sure to find the <strong>best music schools and teachers in {{ loc_name }}</strong>, to make <strong>learning music a fun and enjoyable experience</strong> for your child and yourself.{% endblocktrans %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>{% blocktrans %}Best Music Schools & Teachers in {{ loc_name }}{% endblocktrans %}</h2>
+        <div class="list-group mb-4">
+        {% for populated_place in populated_places %}
+            {% firstof populated_place.name as loc_name %}
+            <a href="{% url 'edu:music_loc_detail' populated_place.slug %}" class="list-group-item list-group-item-action">{% blocktrans %}Best Music Schools & Teachers in {{ loc_name }}{% endblocktrans %}</a>
+        {% endfor %}
+        </div>
+
+        {% include faq_name %}
+
+    </div>
+
+{% endblock %}

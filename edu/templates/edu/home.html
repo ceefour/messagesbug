@@ -1,0 +1,81 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="{{ request.LANGUAGE_CODE }}">
+<head>
+    {% if google_analytics_tracking_id %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ google_analytics_tracking_id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ google_analytics_tracking_id }}');
+    </script>
+    {% endif %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>KeluargaSamara - {% trans 'Happy and healthy family matters' %}</title>
+    <link rel="alternate" hreflang="en-us" href="{{ base_uri }}/"/>
+    <link rel="alternate" hreflang="id-id" href="{{ base_uri }}/id/"/>
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <!--<link href="css/style.css" rel="stylesheet">-->
+</head>
+
+<body>
+{% include 'edu/header.html' %}
+
+<style>
+    .center-cropped {
+        width: 100%;
+        height: 15rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<div class="center-cropped mb-4"
+     style="margin-top: -3rem; background-image: url('{% static 'edu/family-1599826_1280x720.jpg' %}');">
+</div>
+
+<div class="container">
+    <h1 class="mb-4">{% trans 'Happy and healthy family matters' %}</h1>
+
+    <div class="card-deck">
+        <div class="card">
+            <a href="{% url 'edu:index' %}"><img class="card-img-top" src="{% static 'edu/preschool-class.jpg' %}" alt="{% blocktrans %}Best Nursery & Preschools in {{ loc_name }}{% endblocktrans %}"></a>
+            <div class="card-body">
+                <h4 class="card-title"><a href="{% url 'edu:index' %}">{% blocktrans %}Best Nursery & Preschools in {{ loc_name }}{% endblocktrans %}</a></h4>
+                <p class="card-text">{% trans "Your child goes to school soon? It's time to find the favorite nursery/preschool and kindergarten for your child." %}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'edu:index' %}" class="card-link">{% trans 'Details' %}</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="{% url 'edu:music_country' %}"><img class="card-img-top" src="{% static 'edu/music-school.jpg' %}" alt="{% blocktrans %}Best Music Schools & Teachers in {{ loc_name }}{% endblocktrans %}"></a>
+            <div class="card-body">
+                <h4 class="card-title"><a href="{% url 'edu:music_country' %}">{% blocktrans %}Best Music Schools & Teachers in {{ loc_name }}{% endblocktrans %}</a></h4>
+                <p class="card-text">{% blocktrans %}With the <strong>huge benefits to learning to play a musical instrument</strong>, make sure to find the <strong>best music schools and teachers in {{ loc_name }}</strong>, to make <strong>learning music a fun and enjoyable experience</strong> for your child and yourself.{% endblocktrans %}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'edu:music_country' %}" class="card-link">{% trans 'Details' %}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'edu/footer.html' %}
+</body>
+
+</html>

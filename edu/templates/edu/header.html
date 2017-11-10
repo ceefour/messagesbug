@@ -1,0 +1,47 @@
+{% load i18n %}
+{% load static %}
+<!--Navbar-->
+<nav class="navbar navbar-expand-md navbar-dark indigo mb-4">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="{{ home_path }}"><strong>KeluargaSamara</strong></a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ home_path }}">{% trans 'Home' %}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'edu:index' %}">{% trans 'Nursery & Preschools' %}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'edu:music_country' %}">{% trans 'Music Schools & Teachers' %}</a>
+            </li>
+        </ul>
+        <!-- Links -->
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link p-1" href="{{ hreflang_en }}" title="English"><img src="{% static 'edu/lang-uk.png' %}"/></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-1" href="{{ hreflang_id }}" title="Indonesian"><img src="{% static 'edu/lang-id.png' %}"/></a>
+            </li>
+        </ul>
+
+        <!-- Search form -->
+{#            <form class="form-inline">#}
+{#                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">#}
+{#            </form>#}
+    </div>
+    <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
